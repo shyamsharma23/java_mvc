@@ -1,9 +1,20 @@
 package com.example.demo.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.*;
+
+@Entity
+@Table(name="Student_data")
 public class Student {
 	
+	@Id
 	private int student_id;
+	
+	@Column (name="Student_name")
 	private String name;
+	
+	@Column(name="Student_score")
 	private double score;
 	public int getStudent_id() {
 		return student_id;
